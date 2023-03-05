@@ -53,7 +53,7 @@ def cifrar(msg, P):
 ''' Uma função `de_cifrar(msg : str, P : np.array)` que recupera uma mensagem
 cifrada, recebida como entrada, e retorna a mensagem original. `P` é a matriz de permutação que realiza a cifra.'''
 def de_cifrar(msg, P):
-    pass
+    return np.linalg.inv(P) @ msg
 
 '''Uma função `enigma(msg : str, P : np.array, E : np.array)` que faz a cifra enigma na mensagem de entrada
 usando o cifrador `P` e o cifrador auxiliar `E`, ambos representados como matrizes de permutação.'''
