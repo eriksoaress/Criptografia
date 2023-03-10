@@ -6,6 +6,8 @@ alfabeto =[ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 
 '''Uma função `para_one_hot(msg : str)` para codificar mensagens como uma matriz usando one-hot encoding'''
 def para_one_hot(msg):
+    if len(msg) == 0:
+        return {"erro: não há mensagem"}
     matriz = np.zeros([len(alfabeto),len(msg)])
     msg = msg.lower()
     for j, letra in enumerate(msg):
@@ -47,6 +49,9 @@ def para_string(M):
 em uma mensagem recebida como entrada e retorna a mensagem cifrada. `P` é a
 matriz de permutação que realiza a cifra.'''
 def cifrar(msg, P):
+    if len(msg) == 0:
+        return {"erro: não há mensagem"}
+    
     matriz_msg = para_one_hot(msg)
     result = P @ matriz_msg
     return para_string(result)
@@ -54,6 +59,9 @@ def cifrar(msg, P):
 ''' Uma função `de_cifrar(msg : str, P : np.array)` que recupera uma mensagem
 cifrada, recebida como entrada, e retorna a mensagem original. `P` é a matriz de permutação que realiza a cifra.'''
 def de_cifrar(msg, P):
+    if len(msg) == 0:
+        return {"erro: não há mensagem"}
+    
     msg = para_one_hot(msg)
     result = np.linalg.inv(P) @ msg
     return para_string(result)
@@ -61,6 +69,10 @@ def de_cifrar(msg, P):
 '''Uma função `enigma(msg : str, P : np.array, E : np.array)` que faz a cifra enigma na mensagem de entrada
 usando o cifrador `P` e o cifrador auxiliar `E`, ambos representados como matrizes de permutação.'''
 def enigma(msg, P, E):
+    print("passou aqui")
+    if msg == '':
+        return {"erro: não há mensagem"}
+    
     matriz = ''
     result1 = P@para_one_hot(msg)
     for indice, coluna in enumerate(result1.T):
@@ -76,6 +88,10 @@ def enigma(msg, P, E):
 '''Uma função `de_enigma(msg : str, P : np.array, E : np.array)` que recupera uma mensagem cifrada como enigma
 assumindo que ela foi cifrada com o usando o cifrador `P` e o cifrador auxiliar `E`, ambos representados como matrizes de permutação.'''
 def de_enigma(msg, P, E):
+      
+    if len(msg) == 0:
+        return {"erro: não há mensagem"}
+    
     matriz = ''
     result1 = para_one_hot(msg)
     for indice, coluna in enumerate(result1.T):
@@ -91,18 +107,3 @@ def de_enigma(msg, P, E):
     return para_string(matriz)
 
 
-# matriz = np.zeros((len(alfabeto),len(alfabeto)), dtype=int)
-# matriz2 = np.zeros((len(alfabeto),len(alfabeto)), dtype=int)
-
-
-# for i in range(len(alfabeto)):
-#     matriz[i, (i+1)%len(alfabeto)] = 1
-#     matriz2[i, (i+2)%len(alfabeto)] = 1
-
-
-
-# teste_enigma = enigma('aaaaaaaaaaaaaa    ?@:?  kkaa', matriz, matriz2)
-# print(teste_enigma)
-
-# teste_de_enigma = de_enigma(teste_enigma, matriz, matriz2)
-# print(teste_de_enigma)
