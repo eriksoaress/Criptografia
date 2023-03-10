@@ -8,3 +8,8 @@ Para realizar a criptografia e decodificação com Enigma, foram implementadas a
 <h4>de_cifrar(msg : str, P : np.array):</h4> recupera uma mensagem cifrada, recebida como entrada, e retorna a mensagem original. P é a matriz de permutação que realiza a cifra.
 <h4>enigma(msg : str, P : np.array, E : np.array):</h4> faz a cifra Enigma na mensagem de entrada usando o cifrador P e o cifrador auxiliar E, ambos representados como matrizes de permutação.
 <h4>de_enigma(msg : str, P : np.array, E : np.array):</h4> recupera uma mensagem cifrada como Enigma assumindo que ela foi cifrada usando o cifrador P e o cifrador auxiliar E, ambos representados como matrizes de permutação
+<h2> Como Usar </h2>
+
+<h2> Como Rodar o demo.py </h2>
+
+<h2> Testes Rápidos </h2>
