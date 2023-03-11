@@ -1,7 +1,7 @@
 # Criptografia Enigma
 Este projeto consiste em uma implementação de um cifrador e decifrador Enigma, um famoso dispositivo de criptografia usado pela Alemanha nazista durante a Segunda Guerra Mundial. O objetivo desse dispositivo era codificar mensagens militares e protegê-las contra interceptação e decodificação pelos inimigos.
 
-**Equações Implementadas**
+## Equações Implementadas
 As equações utilizadas foram manipulações e multiplicações matriciais. Utilizamos matrizes de transformação (matriz identidade com linhas permutadas), para a realização da cifragem da mensagem. Para isso, seguimos uma determinada regra de multiplicação: a mensagem, antes, é transformada para uma matriz one hot,e iteramos em cada coluna dessa matriz one-hot, fazendo uma multiplicão por uma matriz de transformação *E*. Para cada coluna *i > 1* multiplicamos *i - 1* vezes a matriz *E* pela mensagem em one-hot. Com isso, ficamos com uma matriz que será usada para a cifragem da mensagem. 
 
 Utilizamos o conceito de matriz inversa, para poder decifrar a mensagem cifrada. Para isso, fizemos a inversa da matriz *P* e *E* (ambas matrizes  de permutações, utilizadas para a cifragem da mensagem) e multiplicamos por uma matriz, que representa a matriz one-hot da mensagem, seguindo uma regra. A regra é que para  coluna *j* da matriz one-hot, multiplicamos a inversa de *E*  pela coluna  *j*  *(j - 1)* vezes e aṕós isso, multiplicamos por *P*. Dessa forma, conseguimos obter uma matriz, que será convertida na mensagem original. 
