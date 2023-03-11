@@ -11,7 +11,7 @@ Utilizamos o conceito de matriz inversa, para poder decifrar a mensagem cifrada.
 #Como utilizar a biblioteca:
 
 A biblioteca "criptografia" está disponível para baixar utilizando o pip do python, basta roda: 
-<p> *pip install criptografia*</p>
+<p> * pip install criptografia *</p>
 Aṕos isso, você poderá utilizar os seguintes métodos:
 
 ### cifrar(msg : str, P : np.array):
