@@ -1,5 +1,5 @@
 from main import *
-msg = 'Olá a todos!'
+msg = ''
 msg_onehot = para_one_hot(msg)
 msg_texto = para_string(msg_onehot)
 msg_cifrada = cifrar(msg_texto)
@@ -16,5 +16,4 @@ Criando um enigma da mensagem...\n Enigma gerado: {msg_enigma}
 Decifrando o enigma...\n Enigma decifrado: {msg_enigma_resolvido}
 Finalizando testes.
 ''')
-
 
