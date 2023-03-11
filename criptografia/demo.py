@@ -1,5 +1,5 @@
 from main import *
-msg = ''
+msg = 'Olá a todos!'
 msg_onehot = para_one_hot(msg)
 msg_texto = para_string(msg_onehot)
 msg_cifrada = cifrar(msg_texto)
