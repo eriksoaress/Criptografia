@@ -14,22 +14,22 @@ A biblioteca "criptografia" está disponível para baixar utilizando o pip do py
 `pip install criptografia`
 <p>Aṕos isso, você poderá utilizar os seguintes métodos:</p>
 
-**cifrar(msg : str, P : np.array):**
+`cifrar(msg : str, P : np.array):`
 Aplica uma cifra simples em uma mensagem recebida como entrada e retorna a mensagem cifrada. P é a matriz de permutação que realiza a cifra.
 - Deve ser realizada uma multiplicação matricial entre a matriz de permutação e a mensagem.
 
 
-**de_cifrar(msg : str, P : np.array):**
+`de_cifrar(msg : str, P : np.array):`
 Recupera uma mensagem cifrada, recebida como entrada, e retorna a mensagem original. P é a matriz de permutação que realiza a cifra.
 - Deve ser realizada uma multiplicação matricial entre a inversa da matriz de permutação e a mensagem, efetuando o caminho inverso da cifra.
 
 
-**enigma(msg : str, P : np.array, E : np.array):**
+`enigma(msg : str, P : np.array, E : np.array):`
 Faz a cifra Enigma na mensagem de entrada usando o cifrador P e o cifrador auxiliar E, ambos representados como matrizes de permutação.
 - Deve ser realizada uma multiplicação matricial entre o P, E0 * E1*...Ei (sendo i o indice correspondente a letra da mensagem) e a mensagem.
 
 
-**de_enigma(msg : str, P : np.array, E : np.array):**
+`de_enigma(msg : str, P : np.array, E : np.array):`
 Recupera uma mensagem cifrada como Enigma assumindo que ela foi cifrada usando o cifrador P e o cifrador auxiliar E, ambos representados como matrizes de permutação.
 - Deve ser realizada uma multiplicação matricial E0 * E1*...Ei (sendo i o indice correspondente a letra da mensagem), o P, e a mensagem .
 
