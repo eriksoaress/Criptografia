@@ -8,9 +8,9 @@ Utilizamos o conceito de matriz inversa, para poder decifrar a mensagem cifrada.
 
 
 
-**Como utilizar a biblioteca:**
+## Como utilizar a biblioteca:
 
-<p>A biblioteca "criptografia" está disponível para baixar utilizando o pip do python, basta roda:</p>
+A biblioteca "criptografia" está disponível para baixar utilizando o pip do python, basta roda:
 `pip install criptografia`
 <p>Aṕos isso, você poderá utilizar os seguintes métodos:</p>
 
