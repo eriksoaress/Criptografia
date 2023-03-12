@@ -1,6 +1,6 @@
 import numpy as np
 # criando uma lista com todos os caracteres permitidos
-alfabeto =[ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','1','2','3','4','5','6','7','8','9','0','!','@','#','$','%','&','*','(',')','-','_','+','=','?']
+alfabeto =[ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','1','2','3','4','5','6','7','8','9','0','!','@','#','$','%','&','*','(',')','-','_','+','=','á', 'ã', 'â', 'é', 'ê', 'í', 'ó', ':', '.',',']
 
 # criando duas matrizes 2D, ambas com a mesma quantidade de linhas e colunas do alfabeto, preenchidas com zeros
 matriz = np.zeros((len(alfabeto),len(alfabeto)), dtype=int)

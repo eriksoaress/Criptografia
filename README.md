@@ -10,9 +10,9 @@ Utilizamos o conceito de matriz inversa, para poder decifrar a mensagem cifrada.
 
 ## Como baixar 
 
-A biblioteca "criptografia" está disponível para baixar utilizando o pip do python, basta roda:
-`pip install criptografia`
-<p>Aṕos isso, você poderá utilizar os seguintes métodos:</p>
+A biblioteca "criptografia" está disponível para baixar utilizando o pip do python, basta executar:
+`pip install criptografiaferik`
+<p>Após isso, você poderá utilizar os seguintes métodos:</p>
 
 `cifrar(msg : str, P : np.array):`
 Aplica uma cifra simples em uma mensagem recebida como entrada e retorna a mensagem cifrada. P é a matriz de permutação que realiza a cifra.
@@ -33,6 +33,12 @@ Faz a cifra Enigma na mensagem de entrada usando o cifrador P e o cifrador auxil
 Recupera uma mensagem cifrada como Enigma assumindo que ela foi cifrada usando o cifrador P e o cifrador auxiliar E, ambos representados como matrizes de permutação.
 - Deve ser realizada uma multiplicação matricial E0 * E1*...Ei (sendo i o indice correspondente a letra da mensagem), o P, e a mensagem .
 
+Para utilizar cada uma das funções da biblioteca segue as explições:
+
+- cifrar: Passe a sua mensagem original como método da função, e a sua matriz permutação, sendo essa última opcional, haja vista que já possui uma pre-definida.
+- de_cifrar: Passe a sua mensagem cifrada como método da função, e a matriz permutação, sendo essa última opcional, haja vista que já possui uma pre-definida.
+- enigma: Passe a sua mensagem original como método da função, a matriz permutação, e a matriz permutação auxiliar, sendo as duas últimas opcionais, haja vista que elas estão pre-definidas.
+- de_enigma: Passe o seu enigma como método da função, a matriz permutação, e a matriz permutação auxiliar, sendo as duas últimas opcionais, haja vista que elas estão pre-definidas.
 
 
 ## Como Rodar o demo.py
